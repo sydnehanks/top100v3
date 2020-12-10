@@ -1,2 +1,13 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<h1>Songs<br /><%=@artist.name %></h1>
+<hr />
+<h2> Top Songs Recorded </h2>
+
+<ul>
+    <%= @song.billboards.each do |billboard| %>
+  <li>
+    <%= link_to billboard.title, billboard %>
+  </li>
+  <% end %>
+</ul>
+<br />
+  <%= link_to 'Delete Artist', @song, method: :delete %>

@@ -1,0 +1,9 @@
+<%= form_for [@billboard, @song] do |f| %>
+  <%= f.label :artist%>
+  <%= f.select :artist_id, @artist.collect, { |a| [a.name, a.id]} %>
+  <br />
+  <%= f.label :song %>
+  <%= submit %>
+  
+
+  <%end%>

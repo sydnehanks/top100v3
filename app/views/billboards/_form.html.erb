@@ -1,0 +1,5 @@
+<%= form_for @billboard do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, required: true, placeholder: 'billboard title'%>
+<%= f.submit %>
+<%end%>
