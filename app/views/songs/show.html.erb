@@ -1,13 +1,11 @@
-<h1>Songs<br /><%=@artist.name %></h1>
+<h1><%=@song.title%></h1>
+<h1><%=@song.genre%></h1>
+<h1><%=@song.album%></h1>
+<h1><%=@song.length%></h1>
+<h1>Songs<br /><%=Artist.find(@song.artist_id).name%></h1>
 <hr />
 <h2> Top Songs Recorded </h2>
 
-<ul>
-    <%= @song.billboards.each do |billboard| %>
-  <li>
-    <%= link_to billboard.title, billboard %>
-  </li>
-  <% end %>
-</ul>
+
 <br />
-  <%= link_to 'Delete Artist', @song, method: :delete %>
+  <%= link_to 'Delete Song', [@billboard, @song], method: :delete %>

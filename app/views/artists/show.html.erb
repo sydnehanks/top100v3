@@ -1,20 +1,17 @@
 <h1>Artist <br/> <%=@artist.name %></h1>
 <hr />
 <h2> Top Hits </h2>
-<ol>a song</ol>
-<ol>b song</ol>
-<ol>c song</ol>
-<ol>d song</ol>
-<ol>e song</ol>
-<ol>f song</ol>
-<ol>g song</ol>
-<ol>h song</ol>
-<ol>i song</ol>
-<ol>j song</ol>
-<ol>k song</ol>
-<ol>l song</ol>
+
 
 <ul>
+    <% @artist.songs.each do |song| %>
+  <li>
+    <%= song.title %>
+  </li>
+  <% end %>
+</ul>
+<ul>
+
     <% @artist.billboards.each do |billboard| %>
   <li>
     <%= link_to billboard.title, billboard%>

@@ -3,22 +3,16 @@
 <hr />
 
 <h2> Top 20 Songs</h2>
-<ol>a song</ol>
-<ol>b song</ol>
-<ol>c song</ol>
-<ol>d song</ol>
-<ol>e song</ol>
-<ol>f song</ol>
-<ol>g song</ol>
-<ol>h song</ol>
-<ol>i song</ol>
-<ol>j song</ol>
-<ol>k song</ol>
-<ol>l song</ol>
-
-
-
-
+<ul>
+<% @songs.each do |song| %>
+  <li>
+    <%= link_to song.genre, song%>
+    <%= link_to song.albun, song %>
+    <%= link_to song.title, song %>
+    <%= link_to song.length, song %>
+  </li>
+ <% end %>
+  </ul>
 
 
   </tbody>
